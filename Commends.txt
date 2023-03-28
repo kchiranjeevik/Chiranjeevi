@@ -1,0 +1,96 @@
+zypper install net-tools-deprecated
+zypper refresh
+ip address
+
+nano /var/www/html/index.nginx-debian.html
+
+zypper install nginx
+
+
+#cloud-config
+package_upgrade: true
+packages:
+nginx
+stress
+unzip
+jq
+runcmd:
+service nginx restart
+systemtl enable nginx
+- echo "<h1>$(cat /etc/hostname)</h1>" >> /var/www/html/index.nginx-debian.html
+
+mkdir dirname, mkdir -p /dir1/dir2 ---Making direstory
+rmdir dir---remove empty directoy
+rm -r dir---remove directory name
+touch file name---creating the file
+cat file name 
+vi editor:
+----------
+Press the ESC key for normal mode.
+Press i Key for insert mode
+:wq -- to save & quit the file
+:w -- only save
+:q -- quit
+ctrl f -- scroll down one screen
+ctrl b -- scroll up one screen
+ctrl u -- scroll up a half screen
+ctrl d scrroll down half screen
+L right side to curser
+H left side to curser
+
+df -h
+ls -l long list
+ls -a list along with the hidden files
+ls -ltr will display modified
+pws directory path
+uname -a shows the system information
+uname -r shows the kernal version
+cat /etc/os-release --> To check the linux version
+ 
+
+
+
+file system
+
+fdisk -l ----list the disks
+
+pvcreate /dev/sdb -----------pv name=/dev/sdb
+
+vg create VGname PVname ----Creation of Vg----Vgname:Chiru
+lv create -L +25G -n Lvname Vgname--- Creation of Lv -------------Lvname:bhas
+
+formate the lv
+----------------
+mkfs.ext3 lvname(LV path)
+
+mounting the LV
+--------------
+mount lvname directory name
+Ex: mount /dev/chiru/bhas /root/Desktop/dir
+
+mapper the lv
+-------------
+->/etc/fstab
+/dev/mapper/chiru-bhas (tab) /root/desktop/dir/ (Tab) ext3 (tab) defaults (tab) 00
+
+VGextend & LVextend
+-> vgextend vgname pvname
+ex:vgextend chiru /dev/sdc
+->lvextend -L +10G lvpath
+ex:lvextend -L +10G /dev/chiru/bhas
+resize the format
+->resize2fs lvpath
+ex: resize2fs /dev/chiru/bhas
+
+lsblk
+
+FSTAB:The fstab file is such a configuration file that stores all the information about various partitions and storage devices on the computer. 
+At the time of boot, the fstab file describes how each partition and device will mount."/etc/fstab” file
+Before editing the FSTAB.Please take backup of the existig file.using this commend --> cp -v /etc/fstab /etc/fstab.bkp
+
+mount -a -->This command will mount all the filesystems mentioned in the fstab. This is just like a refresh command to activate the entries in fstab
+mount -fav --> This command will help if you don’t want to apply the modifications in the fstab and want to validate the entries only.  
+This will just fake the entries in the fstab without applying the changes. This is a very useful command.
+
+ 
+

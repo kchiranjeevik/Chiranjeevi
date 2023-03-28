@@ -1,0 +1,51 @@
+
+
+
+IP addressing & Subnetting
+
+IP Address:
+IP stands for Internet Protocol. An IP Address is used as a unique identifier for a resource in a network or an organization. 
+An IP address can be of the type IPV4 or IPV6. We will be discussing only IPv4 addressing in this article. IPv4 is the most widely used IP address across the globe. 
+An IPv4 is a 32-bit address divided into four octets separated by a period (. dot), each octet carrying 8 bits. 
+
+Public IP Address: An IP used over the internet, or you can say which is routable over the internet.
+
+Private IP Address: An IP that is used within the private network(Intranet).
+
+Subnetting:
+A subnet mask is a 32-bit number with 0's and 1's used to divide host and network bits. Host bits are set to 0, 
+and network bits are set to 1. Using Host bits, you can also calculate the number of IPs and determine the IP range
+
+
+
+IP4:32-bit 0.0.0.0 to 255.255.255.255, IP6 : 128 bit
+Class A:1.0.0.1 to 126.255.255.254
+Private IP range:10.0.0.0 to 10.255.255.255
+Class B:128.1.0.1 to 191.255.255.254
+Private IP range:172.16.0.0 to 172.31.255.255
+Class C:192.0.1.1 to 223.255.255.254
+Private IP range:192.168.0.0 to 192.168.255.255
+
+Private IP ranges are also called as Non-internet Routable Address 
+
+curl https://ipinfo.io/ip
+
+10.1.0.0/16
+
+Resorce Group:
+A resource group is a logical container that associates multiple resources so you can manage them as a single entity—based on lifecycle and security. 
+For example, you can create or delete resources as a group if the resources share a similar lifecycle—such as the resources for an N-tier application
+
+
+
+NSG is similar to AWS security Group
+Allow & Deny Traffic
+
+
+
+
+
+
+
+
+

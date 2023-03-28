@@ -1,0 +1,55 @@
+Azure DNS Zones
+
+iterative & recursive dns 
+
+1.Domain name(we can buy GoDaddy)
+
+Find out the IP address for 
+nslookup www.icicbank.com
+
+
+ISP--Internet service provider
+
+Record types
+1.Host or A record
+2.Alias or CNAME 
+3.Name server record
+
+Roothnit servers 
+
+Load balancers:
+-Region Based Load Balancer
+A.Basic & Standard load Balancer(AWS NLB)--Layer 4 or Network layer
+B.Application Gateway (AWS ALB)--Layer 7 or Application Layer
+-Global Load Balancer
+A.Traffic Manager
+B.Front Door
+
+OSI Layer
+Application- L7 (Application Awareness, URL Based, WAF)
+Presentation - L6
+Seesion - L5
+Transport - L4
+Network - L3
+Datalink - L2
+Physical - L1
+
+Azure storage accounts : 5PB
+-Blob - 4.75 TB
+-file share
+-Table
+-Queues
+
+cat ./clouddrive/cloud-init2.txt
+cat ./clouddrive/cloud-init .txt
+
+ipconfig /flushdns
+
+
+Global Load Balancers:
+-Azure Traifc manager-> DNS named base 
+Performance,Prority,Weighted,Geolocation
+-Azure frontdoor(Global AppGw)
+
+
+

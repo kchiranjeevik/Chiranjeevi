@@ -1,0 +1,23 @@
+Firewalls:
+Interface (VM) or Subnet Level firewall
+
+Vnet firewall:
+Azure Firewall
+
+
+Network security Group (NSG) & Application Security Group
+Azure Firewall
+Web Application Firewall(WAF)
+
+NSG is similar to AWS securtity.It will allow and denoy the traffic
+Statefull firwall(NSG) 
+Stateless firewall 
+
+NSG Can be Applied on
+1.At Interface(VM) Leval
+1.At Subnet level 	 
+
+Putty:22
+RDP(windows):3389
+ipinfo.io/ip--Find out the public IP address in the internet
+
